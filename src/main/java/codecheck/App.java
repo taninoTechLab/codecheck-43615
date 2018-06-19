@@ -10,8 +10,8 @@ public class App {
 
 		if (args[0].equals("decode")) {
 			String base = returnNum(args[1]);
+			System.out.println(base);
 			int dec = Integer.parseInt(base, 9);//10進数に変換
-			System.out.println("hogedecode");
 			System.out.println(String.valueOf(dec));
 
 		} else if (args[0].equals("encode")) {
@@ -21,14 +21,14 @@ public class App {
 
 	static String returnNum(String input) {
 		StringBuilder output = new StringBuilder();
+		System.out.println(input.length());
+		System.out.println(input + "hoge");
 		for (int i = 0, l = input.length(); i < l; i++) {
 			switch (input.charAt(i)) {
 			case 'A':
 				output.append('0');
-				System.out.println("hoge0");
 			case 'B':
 				output.append('1');
-				System.out.println("hoge1");
 			case 'C':
 				output.append('2');
 			case 'D':
