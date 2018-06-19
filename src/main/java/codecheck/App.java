@@ -9,9 +9,11 @@ public class App {
 		}
 
 		if (args[0].equals("decode")) {
-			String base36 = returnNum(args[1]);
-			int dec = Integer.parseInt(base36, 9);//10進数に変換
+			String base = returnNum(args[1]);
+			int dec = Integer.parseInt(base, 9);//10進数に変換
+			System.out.println("hogedecode");
 			System.out.println(String.valueOf(dec));
+
 		} else if (args[0].equals("encode")) {
 			System.out.println(returnAlphabet(args[1]));
 		}
@@ -21,11 +23,12 @@ public class App {
 		StringBuilder output = new StringBuilder();
 		for (int i = 0, l = input.length(); i < l; i++) {
 			switch (input.charAt(i)) {
-
 			case 'A':
 				output.append('0');
+				System.out.println("hoge0");
 			case 'B':
 				output.append('1');
+				System.out.println("hoge1");
 			case 'C':
 				output.append('2');
 			case 'D':
@@ -53,23 +56,23 @@ public class App {
 			switch (base9.charAt(i)) {
 
 			case '0':
-				output.append('0');
+				output.append('A');
 			case '1':
-				output.append('1');
+				output.append('B');
 			case '2':
-				output.append('2');
+				output.append('C');
 			case '3':
-				output.append('3');
+				output.append('D');
 			case '4':
-				output.append('4');
+				output.append('E');
 			case '5':
-				output.append('5');
+				output.append('F');
 			case '6':
-				output.append('6');
+				output.append('G');
 			case '7':
-				output.append('7');
+				output.append('H');
 			case '8':
-				output.append('8');
+				output.append('I');
 			}
 		}
 		return output.toString();
