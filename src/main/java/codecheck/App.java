@@ -15,6 +15,8 @@ public class App {
 
 		} else if (args[0].equals("encode")) {
 			System.out.println(returnAlphabet(args[1]));
+		} else if (args[0].equals("align")) {
+
 		}
 	}
 
@@ -56,8 +58,8 @@ public class App {
 
 	static String returnAlphabet(String input) {
 		StringBuilder output = new StringBuilder();
-		int dec = Integer.parseInt(input);
-		String base9 = Integer.toString(dec, 9);
+		Long dec = Long.parseLong(input);
+		String base9 = Long.toString(dec, 9);
 		for (int i = 0, l = base9.length(); i < l; i++) {
 			switch (base9.charAt(i)) {
 
