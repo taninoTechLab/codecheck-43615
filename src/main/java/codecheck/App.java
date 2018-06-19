@@ -10,8 +10,8 @@ public class App {
 
 		if (args[0].equals("decode ")) {
 			String base36 = returnNum(args[1]);
-			int dec = Integer.parseInt(base36, 9);//9進数に変換
-			System.out.println(dec);
+			int dec = Integer.parseInt(base36, 9);//10進数に変換
+			System.out.println(String.valueOf(dec));
 		}
 	}
 
