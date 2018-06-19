@@ -10,7 +10,7 @@ public class App {
 
 		if (args[0].equals("decode")) {
 			String base = returnNum(args[1]);
-			Long dec = Long.parseLong(base, 9);//10進数に変換
+			Long dec = Long.parseLong(base + "L", 9);//10進数に変換
 			System.out.println(String.valueOf(dec));
 
 		} else if (args[0].equals("encode")) {
