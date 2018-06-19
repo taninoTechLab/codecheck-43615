@@ -3,14 +3,13 @@ package codecheck;
 public class App {
 	public static void main(String[] args) {
 
-		for (int i = 0, l = args.length; i < l; i++) {
-			String output = String.format("argv[%s]: %s", i, args[i]);
-			System.out.println(output);
-		}
+//		for (int i = 0, l = args.length; i < l; i++) {
+//			String output = String.format("argv[%s]: %s", i, args[i]);
+//			System.out.println(output);
+//		}
 
 		if (args[0].equals("decode")) {
 			String base = returnNum(args[1]);
-			System.out.println(base);
 			int dec = Integer.parseInt(base, 9);//10進数に変換
 			System.out.println(String.valueOf(dec));
 
@@ -21,8 +20,6 @@ public class App {
 
 	static String returnNum(String input) {
 		StringBuilder output = new StringBuilder();
-		System.out.println(input.length());
-		System.out.println(input + "hoge");
 		for (int i = 0, l = input.length(); i < l; i++) {
 			switch (input.charAt(i)) {
 			case 'A':
