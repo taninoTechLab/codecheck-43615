@@ -47,7 +47,7 @@ public class App {
 		return output
 				.append(addStr)
 				.append(" = ")
-				.append(returnAlphabet(resultStr))
+				.append(resultStr)
 				.toString();
 	}
 
