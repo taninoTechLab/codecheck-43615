@@ -33,13 +33,13 @@ public class App {
 		Long dec = Long.parseLong(base, 9);//10進数に変換
 
 		// 繰り返し加算してHになる数字を導く
-		boolean flag = false;
+		boolean flag = true;
 		while (flag) {
 			result = dec + add;
 			resultStr = returnAlphabet(String.valueOf(result));
 			if (resultStr.matches("^[H]+$")) { // すべての文字がHに一致すれば終わり
 				addStr = returnAlphabet(String.valueOf(add));
-				flag = true;
+				flag = false;
 			}
 			add++;
 		}
