@@ -16,7 +16,7 @@ public class App {
 		} else if (args[0].equals("encode")) {
 			System.out.println(returnAlphabet(args[1]));
 		} else if (args[0].equals("align")) {
-			System.out.println(returnAlphabet(args[1]));
+			System.out.println(calculateH(args[1]));
 		}
 	}
 
